@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 public abstract class GenericServiceImpl<T, PK extends Serializable> implements GenericService<T, PK> {
 	@PersistenceContext(unitName="CustomersPU")
@@ -37,10 +37,9 @@ public abstract class GenericServiceImpl<T, PK extends Serializable> implements 
     public T find(PK pk) throws Throwable {
         return (T) em.find(clazz, pk);
     }
-    @SuppressWarnings("unchecked")
 	@Override
     public List<T> findAll(String aQuery) throws Throwable {
-        Query query = em.createQuery(aQuery);
-        return (List<T>) query.getResultList();
+        TypedQuery<T> query = em.createQuery(aQuery, clazz);
+        return query.getResultList();
     }
 }

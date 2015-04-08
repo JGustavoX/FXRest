@@ -118,7 +118,7 @@ public class MainController implements Initializable {
 	}
 	private void attachTxtSearchListener() {
 		txtSearch.textProperty().addListener((observable, oldValue, newValue) -> {
-		    if(newValue.isEmpty()) {
+		    if(newValue.isEmpty() && !customerBak.isEmpty()) {
 		    	customerList.setAll(customerBak); // restore original cusomer list
 		    }
 		});

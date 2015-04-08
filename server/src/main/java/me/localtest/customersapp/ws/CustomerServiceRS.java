@@ -63,32 +63,30 @@ public class CustomerServiceRS {
     @Produces(MediaType.APPLICATION_XML)
     public Response findAll() throws Throwable {
         List<Customer> all = customerServiceBean.findAll("SELECT c FROM Customer c");
-        if(all == null) {
+        if(all == null || all.isEmpty()) {
           	throw new RuntimeException("No se han encontrado coincidencias");
         }
-        GenericEntity<List<Customer>> wrapper = new GenericEntity<List<Customer>>(all) {};
-        return Response.status(Status.ACCEPTED).entity(wrapper).build();
+        return Response.status(Status.ACCEPTED).entity(new GenericEntity<List<Customer>>(all) {}).build();
     }
     @GET
     @Path("/find/{dni}")
     @Produces(MediaType.APPLICATION_XML)
     public Response findByDni(@PathParam("dni") String dni) throws Throwable {
-        Customer found = customerServiceBean.findByDni(dni);
-        if(found == null) {
-        	throw new Throwable("No se han encontrado coincidencias");
+        List<Customer> found = customerServiceBean.findByDni(dni);
+        if(found == null || found.isEmpty()) {
+        	throw new RuntimeException("No se han encontrado coincidencias");
         }
-        return Response.status(Response.Status.ACCEPTED).entity(found).build();
+        return Response.status(Status.ACCEPTED).entity(new GenericEntity<List<Customer>>(found) {}).build();
     }
     @GET
     @Path("/phones/{dni}")
     @Produces(MediaType.APPLICATION_XML)
     public Response findById(@PathParam("dni") String dni) throws Throwable {
         List<Phone> found = phoneServiceBean.findCustomerPhones(dni);
-        if(found == null) {
-        	throw new Throwable("No se han encontrado coincidencias");
+        if(found == null || found.isEmpty()) {
+        	throw new RuntimeException("No se han encontrado coincidencias");
         }
-        GenericEntity<List<Phone>> wrapper = new GenericEntity<List<Phone>>(found) {};
-        return Response.status(Response.Status.ACCEPTED).entity(wrapper).build();
+        return Response.status(Response.Status.ACCEPTED).entity(new GenericEntity<List<Phone>>(found) {}).build();
     }
     @POST
     @Path("/phones/save")

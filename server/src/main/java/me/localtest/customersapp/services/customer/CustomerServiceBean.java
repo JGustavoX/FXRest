@@ -1,9 +1,11 @@
 package me.localtest.customersapp.services.customer;
 
 
+import java.util.List;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import me.localtest.customersapp.domain.entities.Customer;
 import me.localtest.customersapp.services.GenericServiceImpl;
@@ -16,9 +18,9 @@ public class CustomerServiceBean extends GenericServiceImpl<Customer, Integer> i
 		super(Customer.class);
 	}
 	@Override
-	public Customer findByDni(String dni) {
-		Query query = em.createNamedQuery("Customer.findByDni");
+	public List<Customer> findByDni(String dni) throws Throwable {
+		TypedQuery<Customer> query = em.createNamedQuery("Customer.findByDni", Customer.class);
 		query.setParameter("dni", dni);
-		return (Customer) query.getSingleResult();
+		return query.getResultList();
 	}
 }

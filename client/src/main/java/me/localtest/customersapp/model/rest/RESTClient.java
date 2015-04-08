@@ -35,8 +35,8 @@ public class RESTClient {
             Customer saved = target.path("save").request()
                     .post(Entity.entity(customer, MediaType.APPLICATION_XML), Customer.class);
             return saved;
-        } catch (Throwable e) {
-            throw new RuntimeException(e);
+        } catch (RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     public static Customer updateCustomer(Customer customer) throws RuntimeException {
@@ -47,8 +47,8 @@ public class RESTClient {
             Customer updated = target.path("update").request()
                     .put(Entity.entity(customer, MediaType.APPLICATION_XML), Customer.class);
             return updated;
-        } catch(Throwable e) {
-            throw new RuntimeException(e);
+        } catch(RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     public static Customer removeCustomer(Integer id) throws RuntimeException {
@@ -58,8 +58,8 @@ public class RESTClient {
             WebTarget target = client.target(getBaseUri());
             Customer removed = target.path("remove/"+id).request().delete(Customer.class);
             return removed;
-        } catch(Throwable e) {
-            throw new RuntimeException(e);
+        } catch(RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     public static List<CustomerTblModel> findAllCustomers() throws RuntimeException {
@@ -74,8 +74,8 @@ public class RESTClient {
                 models.add(Convert.toCustomerTblModel(user));
             });
             return models;
-        } catch(Throwable e) {
-            throw new RuntimeException(e);
+        } catch(RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     public static Customer findCustomer(String dni) throws RuntimeException {
@@ -83,10 +83,10 @@ public class RESTClient {
         try {
             client = ClientBuilder.newClient();
             WebTarget target = client.target(getBaseUri());
-            Customer found = target.path("find/"+dni).request().get(Customer.class);
-            return found;
-        } catch(Throwable e) {
-            throw new RuntimeException(e);
+            List<Customer> found = target.path("find/"+dni).request().get(new GenericType<List<Customer>>() {});
+            return found.get(0);
+        } catch(RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     public static List<Phone> findCustomerPhones(String dni) throws RuntimeException {
@@ -97,8 +97,8 @@ public class RESTClient {
     		GenericType<List<Phone>> type = new GenericType<List<Phone>>() {};
     		List<Phone> phones = target.path("phones/"+dni).request().get(type);
     		return phones;
-    	} catch(Throwable e) {
-    		throw new RuntimeException(e);
+    	} catch(RuntimeException e) {
+    		throw e;
     	} finally { if(client != null) client.close(); }
     }
     public static Phone savePhone(Phone phone) throws RuntimeException {
@@ -109,8 +109,8 @@ public class RESTClient {
     		Phone saved = target.path("phones").path("save").request()
     				.post(Entity.entity(phone, MediaType.APPLICATION_XML), Phone.class);
     		return saved;
-    	} catch(Throwable t) {
-    		throw new RuntimeException(t);
+    	} catch(RuntimeException e) {
+    		throw e;
     	} finally { if(client != null) client.close(); }
     }
     public static Phone updatePhone(Phone phone) throws RuntimeException {
@@ -121,8 +121,8 @@ public class RESTClient {
     		Phone updated = target.path("phones").path("update").request()
     				.put(Entity.entity(phone, MediaType.APPLICATION_XML), Phone.class);
     		return updated;
-    	} catch(Throwable t) {
-    		throw new RuntimeException(t);
+    	} catch(RuntimeException e) {
+    		throw e;
     	} finally { if(client != null) client.close(); }
     }
     public static Phone removePhone(Integer id) throws RuntimeException {
@@ -132,8 +132,8 @@ public class RESTClient {
             WebTarget target = client.target(getBaseUri());
             Phone removed = target.path("phones").path("remove/"+id).request().delete(Phone.class);
             return removed;
-        } catch(Throwable e) {
-            throw new RuntimeException(e);
+        } catch(RuntimeException e) {
+            throw e;
         } finally { if(client != null) client.close(); }
     }
     /* *************************************

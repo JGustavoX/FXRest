@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import me.localtest.customersapp.domain.entities.Customer;
 import me.localtest.customersapp.domain.entities.Phone;
@@ -18,23 +18,21 @@ public class PhoneServiceBean extends GenericServiceImpl<Phone, Integer> impleme
 		super(Phone.class);
 	}
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Phone> findCustomerPhones(Integer id) throws Throwable {
-		Query query = em.createNamedQuery("Customer.findById");
-		query.setParameter("id", id);
-		Customer customer = (Customer) query.getSingleResult();
-		query = em.createNamedQuery("Phone.findByCustomer");
-		query.setParameter("customer", customer);
-		return (List<Phone>) query.getResultList();
+		TypedQuery<Customer> customerQuery = em.createNamedQuery("Customer.findById", Customer.class);
+		customerQuery.setParameter("id", id);
+		Customer customer = customerQuery.getSingleResult();
+		TypedQuery<Phone> phoneQuery = em.createNamedQuery("Phone.findByCustomer", Phone.class);
+		phoneQuery.setParameter("customer", customer);
+		return phoneQuery.getResultList();
 	}
 	@Override
-	@SuppressWarnings("unchecked")
 	public List<Phone> findCustomerPhones(String dni) throws Throwable {
-		Query query = em.createNamedQuery("Customer.findByDni");
-		query.setParameter("dni", dni);
-		Customer customer = (Customer) query.getSingleResult();
-		query = em.createNamedQuery("Phone.findByCustomer");
-		query.setParameter("customer", customer);
-		return (List<Phone>) query.getResultList();
+		TypedQuery<Customer> customerQuery = em.createNamedQuery("Customer.findByDni", Customer.class);
+		customerQuery.setParameter("dni", dni);
+		Customer customer = customerQuery.getSingleResult();
+		TypedQuery<Phone> phoneQuery = em.createNamedQuery("Phone.findByCustomer", Phone.class);
+		phoneQuery.setParameter("customer", customer);
+		return phoneQuery.getResultList();
 	}
 }

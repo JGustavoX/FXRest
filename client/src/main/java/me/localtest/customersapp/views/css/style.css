@@ -3,6 +3,7 @@
 }
 .note {
     -fx-background-color: #E2FBE1;
+    -fx-alignment: CENTER;
 }
 .note > .label {
     -fx-text-fill: #3BB839;
