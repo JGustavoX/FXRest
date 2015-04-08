@@ -1,0 +1,76 @@
+.body {
+    -fx-background-color: #f9f9f9;
+}
+.note {
+    -fx-background-color: #E2FBE1;
+}
+.note > .label {
+    -fx-text-fill: #3BB839;
+}
+.title-text {
+    -fx-text-fill: #555;
+    -fx-font-family: 'segoe ui';
+    -fx-font-size: 24pt;
+}
+.new-user-title {
+    -fx-text-fill: #555;
+    -fx-font-family: 'segoe ui';
+    -fx-font-size: 16pt;
+}
+.status-bar {
+    -fx-padding: .25em .75em;
+}
+.status-bar > .label {
+    -fx-text-fill: #f9f9f9;
+}
+.status-bar-disconnected {
+    -fx-background-color: #d53400;
+}
+.status-bar-connected {
+    -fx-background-color: #5CB85C;
+}
+/************** BUTTONS *************/
+.btn {
+    -fx-border-radius: 2px;
+    -fx-padding: .5em 1em;
+}
+.btn:focused {
+    -fx-outline: none;
+}
+.btn-new {
+    -fx-background-color: #5CB85C;
+    -fx-text-fill: #f9f9f9;
+}
+.btn-new:hover {
+    -fx-background-color: #459C45;
+}
+.btn-update {
+    -fx-background-color: #5BC0DE;
+    -fx-text-fill: #f9f9f9;
+}
+.btn-update:hover {
+    -fx-background-color: #4AA2BD;
+    -fx-outline: none;
+}
+.btn-remove {
+    -fx-background-color: #d53400;
+    -fx-text-fill: #f9f9f9;
+}
+.btn-remove:hover {
+    -fx-background-color: #BA3D13;
+    -fx-outline: none;
+}
+.btn-search {
+    -fx-background-color: #428BCA;
+    -fx-text-fill: #f9f9f9;
+}
+.btn-search:hover {
+    -fx-background-color: #3879B2;
+    -fx-outline: none;
+}
+.txt-search {
+    -fx-padding: .5em .5em;
+}
+.table-cell {
+	-fx-alignment: CENTER;
+}

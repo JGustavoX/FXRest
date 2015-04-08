@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="443.0" prefWidth="908.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.localtest.customersapp.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="443.0" prefWidth="912.0" styleClass="body">
+          <top>
+            <Pane prefHeight="123.0" prefWidth="843.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="113.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/user-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="250.0" layoutY="25.0" styleClass="title-text" text="ADMINISTRACIÓN DE CLIENTES" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="287.0" prefWidth="843.0" BorderPane.alignment="CENTER">
+               <children>
+                  <!-- panel de control -->
+                  <Pane layoutY="-4.0" prefHeight="55.0" prefWidth="912.0">
+                     <children>
+                        <TextField fx:id="txtSearch" layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="327.0" styleClass="txt-search" />
+                        <Button fx:id="btnSearch" layoutX="349.0" layoutY="12.0" mnemonicParsing="false" onAction="#searchAction" text="Buscar">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-search" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnUpdate" layoutX="639.0" layoutY="12.0" mnemonicParsing="false" onAction="#updateAction" text="Actualizar">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-update" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnRemove" layoutX="740.0" layoutY="12.0" mnemonicParsing="false" onAction="#removeAction" text="Remover">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-remove" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btnNew" layoutX="835.0" layoutY="12.0" mnemonicParsing="false" onAction="#newAction" text="Nuevo...">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="btn-new" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <!-- tabla -->
+                  <TableView fx:id="customersTable" layoutX="14.0" layoutY="51.0" prefHeight="229.0" prefWidth="888.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="35.0" text="ID" />
+                      <TableColumn fx:id="names" prefWidth="125.0" text="Nombres" />
+                        <TableColumn fx:id="surnames" prefWidth="125.0" text="Apellidos" />
+                        <TableColumn fx:id="birthDate" prefWidth="72.0" text="F. Nac." />
+                        <TableColumn fx:id="dni" prefWidth="66.0" text="DNI" />
+                        <TableColumn fx:id="address" prefWidth="191.0" text="Direccion" />
+                        <TableColumn fx:id="phones" prefWidth="92.0" text="Telefono" />
+                        <TableColumn fx:id="email" prefWidth="135.0" text="Email" />
+                        <TableColumn fx:id="state" prefWidth="45.0" text="Activo" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <Pane fx:id="pnlServerStatus" prefHeight="31.0" prefWidth="581.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblServerStatus" layoutX="13.0" layoutY="8.0" text="Conectado al servidor" />
+               </children>
+               <styleClass>
+                  <String fx:value="status-bar" />
+                  <String fx:value="status-bar-connected" />
+               </styleClass>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

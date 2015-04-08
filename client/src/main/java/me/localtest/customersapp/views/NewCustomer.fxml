@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="408.0" prefWidth="362.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.localtest.customersapp.controllers.NewCustomerController">
+   <children>
+      <Pane prefHeight="56.0" prefWidth="362.0" styleClass="note">
+            <children>
+                <Label layoutX="29.0" layoutY="20.0" text="NOTA: Los únicos campos opcionales son Telefono y Email" />
+            </children>
+      </Pane>
+      <Pane layoutY="55.0" prefHeight="358.0" prefWidth="362.0" styleClass="body">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" text="Nombre:" />
+            <TextField fx:id="txtNames" layoutX="123.0" layoutY="20.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label layoutX="14.0" layoutY="65.0" text="Apellidos:" />
+            <TextField fx:id="txtSurnames" layoutX="123.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label layoutX="14.0" layoutY="107.0" text="DNI:" />
+            <TextField fx:id="txtDni" layoutX="123.0" layoutY="105.0" prefHeight="25.0" prefWidth="81.0" />
+            <Label layoutX="14.0" layoutY="146.0" text="Dirección:" />
+            <TextField fx:id="txtAddress" layoutX="123.0" layoutY="143.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label layoutX="14.0" layoutY="186.0" text="F. Nacimiento:" />
+            <DatePicker fx:id="dpBirthDate" layoutX="124.0" layoutY="184.0" prefHeight="25.0" prefWidth="136.0" />
+            <Label layoutX="14.0" layoutY="230.0" text="Email:" />
+            <TextField fx:id="txtEmail" layoutX="124.0" layoutY="228.0" prefHeight="25.0" prefWidth="226.0" />
+            <Label layoutX="14.0" layoutY="275.0" text="Estado:" />
+            <CheckBox fx:id="cbxState" layoutX="124.0" layoutY="275.0" mnemonicParsing="false" text="Activo" />
+            <Button layoutX="200.0" layoutY="320.0" mnemonicParsing="false" onAction="#registerAction" text="Registrar">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-search" />
+               </styleClass>
+            </Button>
+            <Button layoutX="280.0" layoutY="320.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancelar">
+                <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-remove" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

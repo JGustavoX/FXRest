@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="228.0" prefWidth="241.0" stylesheets="@css/style.css" 
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="me.localtest.customersapp.controllers.CustomerPhonesController">
+   <children>
+      <ListView fx:id="phoneListView" layoutX="5.0" layoutY="9.0" prefHeight="170.0" prefWidth="161.0" />
+      <Button onAction="#addAction" layoutX="176.0" layoutY="9.0" mnemonicParsing="false" text="Agregar" />
+      <Button onAction="#removeAction" layoutX="176.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Eliminar" />
+      <Button onAction="#acceptAction" layoutX="5.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" text="Aceptar" />
+   </children>
+</AnchorPane>
