@@ -10,7 +10,7 @@
    <children>
       <Pane prefHeight="56.0" prefWidth="362.0" styleClass="note">
             <children>
-                <Label layoutX="29.0" layoutY="20.0" text="NOTA: Los únicos campos opcionales son Telefono y Email" />
+                <Label layoutX="29.0" layoutY="20.0" text="NOTA: El único campo opcional es estado" />
             </children>
       </Pane>
       <Pane layoutY="55.0" prefHeight="358.0" prefWidth="362.0" styleClass="body">
