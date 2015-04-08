@@ -10,8 +10,8 @@ import me.localtest.customersapp.domain.entities.CustomerTblModel;
 public class Convert {
     
     /**
-     * The properties of the each User retrieved from REST service
- 	 * are set to an UserTableModel object and this is added to the table
+     * The properties of each User retrieved from REST service
+ 	 * are set to an UserTableModel object and it is added to the table
      * @param customer User getted from REST service
      * @return UserTableModel with properties values of User
      */
