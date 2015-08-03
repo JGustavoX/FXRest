@@ -19,10 +19,12 @@ public class DateUtil {
         } catch(ParseException e) {
             e.getMessage();
         }
+        
         return newDate;
     }
     public static String toString(String format, Date date) {
         DateFormat formatter = new SimpleDateFormat(format);
+        
         return formatter.format(date);
     }
     public static Date format(String format, Date date) {
@@ -34,6 +36,7 @@ public class DateUtil {
         } catch (ParseException e) {
             e.getMessage();
         }
+        
         return newDate;
     }
 }
