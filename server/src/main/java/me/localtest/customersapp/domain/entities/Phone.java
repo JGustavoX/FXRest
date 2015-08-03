@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="phone")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Phone {
+	
 	@XmlElement(name="id")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
