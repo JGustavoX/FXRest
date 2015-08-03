@@ -27,7 +27,7 @@ public class CustomerPhonesController {
 	@FXML private void addAction() {
 		try {
 			Optional<String> phoneNumber = DialogUtil.
-					buildInputDialog("Registro de teléfonos", null, "Ingrese un teléfono").showAndWait();
+					buildInputDialog("Registro de telÃ©fonos", null, "Ingrese un telÃ©fono").showAndWait();
 			if(phoneNumber.isPresent() && !phoneNumber.get().isEmpty()) {
 				Customer found = RESTClient.findCustomer(getDniOfSelectedUser());
 				Phone phone = new Phone();
