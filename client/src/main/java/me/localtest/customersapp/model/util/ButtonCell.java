@@ -13,7 +13,7 @@ import me.localtest.customersapp.domain.entities.CustomerTblModel;
 
 public class ButtonCell extends TableCell<CustomerTblModel, Boolean> {
 	private final StackPane pane = new StackPane();
-	private final Button btnPhones = new Button("Teléfonos");
+	private final Button btnPhones = new Button("TelÃ©fonos");
 
 	public ButtonCell(final MainController FATHER, final Modality MODALITY) {
 		pane.setPadding(new Insets(3));
