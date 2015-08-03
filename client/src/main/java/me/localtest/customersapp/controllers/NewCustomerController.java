@@ -17,7 +17,7 @@ import javafx.scene.control.Alert.AlertType;
 
 /**
  *
- * @author gus
+ * @author Gustavo García
  */
 public class NewCustomerController extends AbstractCustomerController {
     private MainController fatherGUI;
