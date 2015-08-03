@@ -58,7 +58,7 @@ public class MainController implements Initializable {
 			customerList.clear(); // clear list
 			customerList.add(found); // add the fund customer
 		} catch (RuntimeException e) {
-			DialogUtil.buildSimpleDialog("Búsqueda de usuarios", 
+			DialogUtil.buildSimpleDialog("BÃºsqueda de usuarios", 
 					null,"No se han encontrado coincidencias",AlertType.INFORMATION).showAndWait();
 		}
 	}
@@ -69,7 +69,7 @@ public class MainController implements Initializable {
 	@FXML
 	private void removeAction() {
 		Optional<ButtonType> decision = DialogUtil.buildConfirmationDialog(
-				"Eliminar usuario", null, "¿Está seguro de eliminar al usuario?").showAndWait();
+				"Eliminar usuario", null, "Â¿EstÃ¡ seguro de eliminar al usuario?").showAndWait();
 		if (decision.get() == ButtonType.OK) {
 			try {
 				CustomerTblModel selectedCustomer = customersTable.getSelectionModel().getSelectedItem();
