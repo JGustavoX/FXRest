@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class StageUtil {
 	
