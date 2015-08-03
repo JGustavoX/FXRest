@@ -101,15 +101,6 @@ public class CustomerTblModel {
     public void setAddress(String address) {
         this.address.set(address);
     }
-    /*public Boolean getPhones() {
-    	return phones.get();
-    }
-    public BooleanProperty getPhonesProperty() {
-    	return phones;
-    }
-    public void setPhones(Boolean phones) {
-    	this.phones.set(phones);
-    }*/
     public String getEmail() {
         return email.get();
     }
