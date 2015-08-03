@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 @Entity
 @Table(name="customers")
