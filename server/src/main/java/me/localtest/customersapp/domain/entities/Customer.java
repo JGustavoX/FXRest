@@ -32,8 +32,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @SuppressWarnings("serial")
 public class Customer implements Serializable {
-    //private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    private static final long serialVersionUID = 1L;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     @XmlElement(name="id")
     private Integer id;
