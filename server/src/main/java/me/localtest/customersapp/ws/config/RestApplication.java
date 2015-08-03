@@ -10,7 +10,7 @@ import me.localtest.customersapp.ws.CustomerServiceRS;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 @ApplicationPath("api")
 public class RestApplication extends Application {
