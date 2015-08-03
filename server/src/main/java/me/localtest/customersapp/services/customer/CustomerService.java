@@ -1,7 +1,6 @@
 package me.localtest.customersapp.services.customer;
 
 import java.util.List;
-
 import me.localtest.customersapp.domain.entities.Customer;
 import me.localtest.customersapp.services.GenericService;
 
