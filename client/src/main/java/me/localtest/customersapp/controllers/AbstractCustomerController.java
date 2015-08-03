@@ -11,7 +11,7 @@ import me.localtest.customersapp.model.util.DateUtil;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public abstract class AbstractCustomerController {
     
