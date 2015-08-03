@@ -1,7 +1,6 @@
 package me.localtest.customersapp.services.phone;
 
 import java.util.List;
-
 import me.localtest.customersapp.domain.entities.Phone;
 import me.localtest.customersapp.services.GenericService;
 
