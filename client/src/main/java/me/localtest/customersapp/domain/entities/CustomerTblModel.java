@@ -8,7 +8,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class CustomerTblModel {
     final private IntegerProperty id;
