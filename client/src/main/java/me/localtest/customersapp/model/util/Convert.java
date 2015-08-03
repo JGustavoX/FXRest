@@ -5,7 +5,7 @@ import me.localtest.customersapp.domain.entities.CustomerTblModel;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class Convert {
     
