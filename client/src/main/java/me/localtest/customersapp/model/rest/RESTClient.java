@@ -22,7 +22,7 @@ import me.localtest.customersapp.model.util.Convert;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gus García
  */
 public class RESTClient {
     private static final String WS_URI = "http://localhost:8080/customersapp/api/customers";
