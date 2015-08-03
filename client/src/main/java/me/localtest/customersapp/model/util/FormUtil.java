@@ -5,7 +5,7 @@ import javafx.scene.control.TextField;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class FormUtil {
     
