@@ -23,7 +23,7 @@ public class Main extends Application {
             AnchorPane root = (AnchorPane) loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setTitle("Administración de clientes");
+            stage.setTitle("AdministraciÃ³n de clientes");
             stage.getIcons().add(new Image(Main.class.getResourceAsStream("img/ico.png")));
             stage.setResizable(false);
             stage.sizeToScene();
