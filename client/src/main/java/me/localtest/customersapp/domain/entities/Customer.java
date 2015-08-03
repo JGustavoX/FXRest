@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 @XmlRootElement(name="customer")
 @XmlAccessorType(XmlAccessType.FIELD)
