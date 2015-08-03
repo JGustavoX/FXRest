@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class DateUtil {
     
