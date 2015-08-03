@@ -26,7 +26,7 @@ import me.localtest.customersapp.services.phone.PhoneServiceBean;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 @Path("/customers")
 @Stateless
