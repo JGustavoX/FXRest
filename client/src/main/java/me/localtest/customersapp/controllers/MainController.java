@@ -29,7 +29,7 @@ import me.localtest.customersapp.model.util.StageUtil;
 
 /**
  *
- * @author gus
+ * @author Gustavo García
  */
 public class MainController implements Initializable {
 	@FXML private Pane pnlServerStatus;
