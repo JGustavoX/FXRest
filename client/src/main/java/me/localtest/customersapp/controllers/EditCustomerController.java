@@ -18,9 +18,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 /**
- * FXML Controller class
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class EditCustomerController extends AbstractCustomerController {
     @FXML private TextField txtNames;
