@@ -1,6 +1,6 @@
 # REST-FX-CustomersApp
 
-RESTful WebService and JavaFX client
+Example of JavaFX client app consuming a RESTful service
 
 **NOTE:** Only tested in WildFly 8.2.0 final
 
