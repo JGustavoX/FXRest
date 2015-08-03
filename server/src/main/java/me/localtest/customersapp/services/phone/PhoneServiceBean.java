@@ -5,7 +5,6 @@ import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
-
 import me.localtest.customersapp.domain.entities.Customer;
 import me.localtest.customersapp.domain.entities.Phone;
 import me.localtest.customersapp.services.GenericServiceImpl;
