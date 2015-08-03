@@ -22,6 +22,7 @@ public class DialogUtil {
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(body);
+        
         return alert;
     }
     public static Alert buildConfirmationDialog(String title, String header, String body) {
@@ -29,6 +30,7 @@ public class DialogUtil {
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(body);
+        
         return alert;
     }
     public static Alert buildExceptionDialog(String title, String header, Exception e) {
@@ -51,6 +53,7 @@ public class DialogUtil {
         content.add(label, 0, 0);
         content.add(traceArea, 0, 1);
         alert.getDialogPane().setExpandableContent(content);
+        
         return alert;
     }
     public static TextInputDialog buildInputDialog(String title, String header, String body) {
@@ -58,6 +61,7 @@ public class DialogUtil {
     	dialog.setTitle(title);
     	dialog.setHeaderText(header);
     	dialog.setContentText(body);
+    	
     	return dialog;
     }
 }
