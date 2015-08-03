@@ -3,8 +3,10 @@
 	<persistence-unit name="CustomersPU" transaction-type="JTA">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>java:/jdbc/customers</jta-data-source>
+		
 		<properties>
 			<!--<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />-->
 		</properties>
+		
 	</persistence-unit>
 </persistence>
