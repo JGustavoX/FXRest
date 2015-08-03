@@ -13,5 +13,6 @@
 *.DOT  diff=astextplain
 *.pdf  diff=astextplain
 *.PDF	 diff=astextplain
+*.PDFX
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
