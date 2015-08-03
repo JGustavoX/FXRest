@@ -45,7 +45,7 @@ public class EditCustomerController extends AbstractCustomerController {
             	closeStage();
                 updateUserInTable(Convert.toCustomerTblModel(updated));
             } else {
-            	DialogUtil.buildSimpleDialog("Importante", null, "No deje campos vacíos", AlertType.WARNING).showAndWait();
+            	DialogUtil.buildSimpleDialog("Importante", null, "No deje campos vacÃ­os", AlertType.WARNING).showAndWait();
             }
         } catch(RuntimeException | ParseException e) {
             DialogUtil.buildExceptionDialog
