@@ -8,7 +8,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 public abstract class GenericServiceImpl<T, PK extends Serializable> implements GenericService<T, PK> {
-	@PersistenceContext(unitName="CustomersPU")
+    
+    @PersistenceContext(unitName="CustomersPU")
     protected EntityManager em;
     protected Class<T> clazz;
     
