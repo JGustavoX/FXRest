@@ -23,8 +23,8 @@ public class StageUtil {
     public static Stage loadNewCustomer(final MainController FATHER, final Modality MODALITY) {
         Stage stage = new Stage();
         try {
-        	final FXMLLoader LOADER = new FXMLLoader();
-        	LOADER.setLocation(Main.class.getResource("NewCustomer.fxml"));
+            final FXMLLoader LOADER = new FXMLLoader();
+            LOADER.setLocation(Main.class.getResource("NewCustomer.fxml"));
             AnchorPane root = (AnchorPane) LOADER.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -38,6 +38,7 @@ public class StageUtil {
         } catch (IOException e) {
             e.getMessage();
         }
+        
         return stage;
     }
     public static Stage loadEditCustomer(final MainController FATHER, final Modality MODALITY) {
@@ -58,6 +59,7 @@ public class StageUtil {
         } catch (IOException e) {
             e.getMessage();
         }
+        
         return stage;
     }
     public static Stage loadCustomerPhones(final MainController FATHER, final Modality MODALITY) {
@@ -68,7 +70,7 @@ public class StageUtil {
     		AnchorPane root = (AnchorPane) LOADER.load();
     		Scene scene = new Scene(root);
     		stage.setScene(scene);
-    		stage.setTitle("Teléfonos del cliente");
+    		stage.setTitle("TelÃ©fonos del cliente");
     		stage.getIcons().add(new Image(Main.class.getResourceAsStream("img/ico.png")));
     		stage.initModality(MODALITY);
     		stage.setResizable(false);
@@ -79,6 +81,7 @@ public class StageUtil {
     	} catch(IOException e) {
     		e.getMessage();
     	}
+    	
     	return stage;
     }
 }
