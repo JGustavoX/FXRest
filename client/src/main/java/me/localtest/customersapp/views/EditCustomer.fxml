@@ -6,7 +6,8 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="408.0" prefWidth="362.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.localtest.customersapp.controllers.EditCustomerController">
+<AnchorPane prefHeight="408.0" prefWidth="362.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.localtest.customersapp.controllers.EditCustomerController">
    <children>
       <Pane prefHeight="56.0" prefWidth="362.0" styleClass="note">
             <children>
