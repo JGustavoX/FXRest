@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public interface GenericService<T, PK extends Serializable> {
     public T save(T t) throws Throwable;
