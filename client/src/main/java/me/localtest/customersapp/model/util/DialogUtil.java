@@ -13,7 +13,7 @@ import javafx.scene.layout.Priority;
 
 /**
  *
- * @author Gus Garsaky
+ * @author Gustavo García
  */
 public class DialogUtil {
     
